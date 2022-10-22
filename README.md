@@ -12,4 +12,3 @@
 
 - **run**:
   `.filename.exe`
-# c-hello
