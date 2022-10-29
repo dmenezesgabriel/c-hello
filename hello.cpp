@@ -5,8 +5,12 @@ command
 */
 #include <stdio.h>
 #include <locale.h>
+#include <string.h>
 // constant
-#define five 5
+#define FIVE 5
+#define MAX 32
+#define N_STUDENTS 4
+#define N_CHARACTERS 30
 
 int main() {
     // Variables
@@ -32,6 +36,9 @@ int main() {
 
     // matrix
     int tbl_user[5][2];
+
+    // string
+    char name[N_STUDENTS][N_CHARACTERS];
 
     x = 1;
     y = 2.3;
@@ -137,5 +144,14 @@ int main() {
 
     for (index = 0; index < 5; index++) {
         printf("\nuser id %d is %d with category %c ", index, tbl_user[index][0], tbl_user[index][1]);
+    }
+
+    index=0;
+
+    // String
+    for (index = 0; index < N_STUDENTS; index++) {
+        printf("\nType students name: ");
+        fflush(stdin);
+        fgets(name[index], N_CHARACTERS, stdin);
     }
 }
