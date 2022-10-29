@@ -7,11 +7,16 @@ command
 #include <locale.h>
 
 int main() {
-    int input1;
-    char input2;
     int x;
     float y;
     char z;
+
+    int input1;
+    char input2;
+    char input3;
+
+    int N;
+
     x = 1;
     y = 2.3;
     z = 'A';
@@ -37,4 +42,18 @@ int main() {
     scanf("%c", &input2);
     printf("\ninputted value is %c", input2);
     fflush(stdin);
+
+    printf("\nType another character");
+    input3 = getchar();
+    printf("\nThe inputted value is %c", input3);
+
+    // if
+    printf("\nType an integer number: ");
+    scanf("%d", &N);
+
+    if(N%2 > 0) {
+        printf("Number is odd");
+    } else {
+        printf("Number is even");
+    }
 }
