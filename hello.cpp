@@ -5,6 +5,8 @@ command
 */
 #include <stdio.h>
 #include <locale.h>
+// constant
+#define five 5
 
 int main() {
     int x;
@@ -22,6 +24,9 @@ int main() {
     double number, sum;
 
     int counter;
+
+    int user_ids[5];
+    int index;
 
     x = 1;
     y = 2.3;
@@ -101,6 +106,18 @@ int main() {
 
     // For
     for (counter = 0; counter <= 10; counter++) {
-        printf("counting to 10... %d ", counter);
+        printf("\ncounting to 10... %d ", counter);
     }
+
+    // vector
+    // user_ids[5]
+    for (index = 0; index < 5; index++) {
+        printf("\nType user id %d: ", index+1);
+        scanf("%d", &user_ids[index]);
+    }
+
+    for (index = 0; index < 5; index++) {
+        printf("\nuser id %d is %d: ", index, user_ids[index]);
+    }
+
 }
