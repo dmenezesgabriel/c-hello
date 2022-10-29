@@ -19,6 +19,8 @@ int main() {
 
     int option;
 
+    double number, sum;
+
     x = 1;
     y = 2.3;
     z = 'A';
@@ -61,7 +63,7 @@ int main() {
     fflush(stdin);
 
     // switch
-    printf("\nChoose an option: \n1)\n2)\n3)");
+    printf("\nChoose an option: \n1)\n2)\n3)\n");
     scanf("%d", &option);
     switch (option)
     {
@@ -79,5 +81,18 @@ int main() {
 
     default:
         printf("\nYou selected an option different from the ones given --> %d", option);
+    }
+
+    // do while
+    do {
+        printf("\nInsert a number: ");
+        scanf("%lf", &number);
+        sum += number;
+    } while (number != 0.0);
+    printf("\nThe sum is equals to %.2lf", sum);
+
+    while( sum < 100) {
+        printf("\nprogress: %2lf/100.00", sum);
+        sum++;
     }
 }
