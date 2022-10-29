@@ -7,7 +7,8 @@ command
 #include <locale.h>
 
 int main() {
-    int input;
+    int input1;
+    char input2;
     int x;
     float y;
     char z;
@@ -28,6 +29,12 @@ int main() {
 
    // User input
     printf("\nType an integer value: ");
-    scanf("%d", &input);
-    printf("\ninputted value is %d", input);
+    scanf("%d", &input1);
+    printf("\ninputted value is %d", input1);
+    fflush(stdin);
+
+    printf("\nType a character: ");
+    scanf("%c", &input2);
+    printf("\ninputted value is %c", input2);
+    fflush(stdin);
 }
