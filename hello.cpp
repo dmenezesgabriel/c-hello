@@ -17,6 +17,8 @@ int main() {
 
     int N;
 
+    int option;
+
     x = 1;
     y = 2.3;
     z = 'A';
@@ -43,7 +45,7 @@ int main() {
     printf("\ninputted value is %c", input2);
     fflush(stdin);
 
-    printf("\nType another character");
+    printf("\nType another character: ");
     input3 = getchar();
     printf("\nThe inputted value is %c", input3);
 
@@ -52,8 +54,30 @@ int main() {
     scanf("%d", &N);
 
     if(N%2 > 0) {
-        printf("Number is odd");
+        printf("\nNumber is odd");
     } else {
-        printf("Number is even");
+        printf("\nNumber is even");
+    }
+    fflush(stdin);
+
+    // switch
+    printf("\nChoose an option: \n1)\n2)\n3)");
+    scanf("%d", &option);
+    switch (option)
+    {
+    case 1:
+        printf("\nSelected option %d", option);
+        break;
+
+    case 2:
+        printf("\nSelected option %d", option);
+        break;
+
+    case 3:
+        printf("\nSelected option %d", option);
+        break;
+
+    default:
+        printf("\nYou selected an option different from the ones given --> %d", option);
     }
 }
