@@ -21,6 +21,8 @@ int main() {
 
     double number, sum;
 
+    int counter;
+
     x = 1;
     y = 2.3;
     z = 'A';
@@ -91,8 +93,14 @@ int main() {
     } while (number != 0.0);
     printf("\nThe sum is equals to %.2lf", sum);
 
+    // While
     while( sum < 100) {
         printf("\nprogress: %2lf/100.00", sum);
         sum++;
+    }
+
+    // For
+    for (counter = 0; counter <= 10; counter++) {
+        printf("counting to 10... %d ", counter);
     }
 }
