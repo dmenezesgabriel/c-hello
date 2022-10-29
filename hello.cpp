@@ -9,6 +9,7 @@ command
 #define five 5
 
 int main() {
+    // Variables
     int x;
     float y;
     char z;
@@ -25,8 +26,12 @@ int main() {
 
     int counter;
 
+    // vector
     int user_ids[5];
     int index;
+
+    // matrix
+    int tbl_user[5][2];
 
     x = 1;
     y = 2.3;
@@ -92,7 +97,7 @@ int main() {
 
     // do while
     do {
-        printf("\nInsert a number: ");
+        printf("\nInsert a number > 1 to continue, or 0 to stop: ");
         scanf("%lf", &number);
         sum += number;
     } while (number != 0.0);
@@ -117,7 +122,20 @@ int main() {
     }
 
     for (index = 0; index < 5; index++) {
-        printf("\nuser id %d is %d: ", index, user_ids[index]);
+        printf("\nuser id %d is %d", index, user_ids[index]);
     }
 
+    index=0;
+
+    for (index = 0; index < 5; index++) {
+        printf("\nType user id %d: ", index+1);
+        scanf("%d", &tbl_user[index][0]);
+        fflush(stdin);
+        printf("\nType user category (a, b, c)");
+        scanf("%c", &tbl_user[index][1]);
+    }
+
+    for (index = 0; index < 5; index++) {
+        printf("\nuser id %d is %d with category %c ", index, tbl_user[index][0], tbl_user[index][1]);
+    }
 }
