@@ -13,33 +13,9 @@ command
 #define N_CHARACTERS 30
 
 int main() {
-    // Variables
     int x;
     float y;
     char z;
-
-    int input1;
-    char input2;
-    char input3;
-
-    int N;
-
-    int option;
-
-    double number, sum;
-
-    int counter;
-
-    // vector
-    int user_ids[5];
-    int index;
-
-    // matrix
-    int tbl_user[5][2];
-
-    // string
-    char name[N_STUDENTS][N_CHARACTERS];
-
     x = 1;
     y = 2.3;
     z = 'A';
@@ -47,7 +23,9 @@ int main() {
     setlocale(LC_ALL, "");
     printf("Hello, World!");
 
+    ///////////////////////////////////////////////////////////////////////////
     // Formatting
+    ///////////////////////////////////////////////////////////////////////////
     printf("\nx value is: %d", x);
     printf("\ny value is: %f", y);
     printf("\nz value is: %c", z);
@@ -55,7 +33,13 @@ int main() {
     y = 8.5421;
     printf("\nx plus 1 = %d and z still = %c", x + 1, z);
 
-   // User input
+    ///////////////////////////////////////////////////////////////////////////
+    // User input
+    ///////////////////////////////////////////////////////////////////////////
+    int input1;
+    char input2;
+    char input3;
+
     printf("\nType an integer value: ");
     scanf("%d", &input1);
     printf("\ninputted value is %d", input1);
@@ -70,7 +54,11 @@ int main() {
     input3 = getchar();
     printf("\nThe inputted value is %c", input3);
 
+    ///////////////////////////////////////////////////////////////////////////
     // if
+    ///////////////////////////////////////////////////////////////////////////
+    int N;
+
     printf("\nType an integer number: ");
     scanf("%d", &N);
 
@@ -81,7 +69,11 @@ int main() {
     }
     fflush(stdin);
 
+    ///////////////////////////////////////////////////////////////////////////
     // switch
+    ///////////////////////////////////////////////////////////////////////////
+    int option;
+
     printf("\nChoose an option: \n1)\n2)\n3)\n");
     scanf("%d", &option);
     switch (option)
@@ -102,7 +94,11 @@ int main() {
         printf("\nYou selected an option different from the ones given --> %d", option);
     }
 
+    ///////////////////////////////////////////////////////////////////////////
     // do while
+    ///////////////////////////////////////////////////////////////////////////
+    double number, sum;
+
     do {
         printf("\nInsert a number > 1 to continue, or 0 to stop: ");
         scanf("%lf", &number);
@@ -116,13 +112,22 @@ int main() {
         sum++;
     }
 
+    ///////////////////////////////////////////////////////////////////////////
     // For
+    ///////////////////////////////////////////////////////////////////////////
+    int counter;
+
     for (counter = 0; counter <= 10; counter++) {
         printf("\ncounting to 10... %d ", counter);
     }
 
+    ///////////////////////////////////////////////////////////////////////////
     // vector
     // user_ids[5]
+    ///////////////////////////////////////////////////////////////////////////
+    int user_ids[5];
+    int index;
+
     for (index = 0; index < 5; index++) {
         printf("\nType user id %d: ", index+1);
         scanf("%d", &user_ids[index]);
@@ -132,6 +137,10 @@ int main() {
         printf("\nuser id %d is %d", index, user_ids[index]);
     }
 
+    ///////////////////////////////////////////////////////////////////////////
+    // matrix
+    ///////////////////////////////////////////////////////////////////////////
+    int tbl_user[5][2];
     index=0;
 
     for (index = 0; index < 5; index++) {
@@ -148,7 +157,11 @@ int main() {
 
     index=0;
 
+    ///////////////////////////////////////////////////////////////////////////
     // String
+    ///////////////////////////////////////////////////////////////////////////
+    char name[N_STUDENTS][N_CHARACTERS];
+
     for (index = 0; index < N_STUDENTS; index++) {
         printf("\nType students name: ");
         fflush(stdin);
