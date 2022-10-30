@@ -213,5 +213,13 @@ int main() {
     printf("\nNotebook price: %f", notebook_sell.price);
 
     struct Label label = {1, 2.3, "Testing"};
-    printf("x= %d, y= %f, n=%s", label.x, label.y, label.n);
+    printf("\nx= %d, y= %f, n=%s", label.x, label.y, label.n);
+    ///////////////////////////////////////////////////////////////////////////
+    // Pointer
+    ///////////////////////////////////////////////////////////////////////////
+    int h = 3;
+    int *ptr;
+    ptr = &x;
+
+    printf("\nh=%d ptr=%d ptr content: %d", h, ptr, *ptr);
 }
