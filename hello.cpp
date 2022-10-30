@@ -219,7 +219,8 @@ int main() {
     ///////////////////////////////////////////////////////////////////////////
     int h = 3;
     int *ptr;
-    ptr = &x;
+    // a pointer stores a variable address (&variable_name)
+    ptr = &h;
 
     printf("\nh=%d ptr=%d ptr content: %d", h, ptr, *ptr);
 }
