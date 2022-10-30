@@ -20,6 +20,12 @@ struct Store_Notebook_Record {
     float price;
 };
 
+struct Label {
+    int x;
+    float y;
+    char n[20];
+};
+
 int main() {
     int x;
     float y;
@@ -205,4 +211,7 @@ int main() {
     printf("\nCover type: %s", notebook_sell.cover_type);
     printf("\nNotebook size: %s", notebook_sell.size);
     printf("\nNotebook price: %f", notebook_sell.price);
+
+    struct Label label = {1, 2.3, "Testing"};
+    printf("x= %d, y= %f, n=%s", label.x, label.y, label.n);
 }
