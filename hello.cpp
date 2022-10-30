@@ -12,6 +12,14 @@ command
 #define N_STUDENTS 4
 #define N_CHARACTERS 30
 
+struct Store_Notebook_Record {
+    char manufacturer[20];
+    int sheets_number;
+    char cover_type[15];
+    char size[15];
+    float price;
+};
+
 int main() {
     int x;
     float y;
@@ -167,4 +175,34 @@ int main() {
         fflush(stdin);
         fgets(name[index], N_CHARACTERS, stdin);
     }
+
+    ///////////////////////////////////////////////////////////////////////////
+    // Struct
+    ///////////////////////////////////////////////////////////////////////////
+    struct Store_Notebook_Record notebook_registration, notebook_sell;
+    printf("\nRegister a notebook:");
+    printf("\nType the manufacturer: ");
+    fflush(stdin);
+    scanf("%s", notebook_registration.manufacturer);
+    printf("\nType the number of sheets: ");
+    fflush(stdin);
+    scanf("%d", &notebook_registration.sheets_number);
+    printf("\nType the cover type: (hard/brochure) ");
+    fflush(stdin);
+    scanf("%s", notebook_registration.cover_type);
+    printf("\nType the notebook size: ");
+    fflush(stdin);
+    scanf("%s", notebook_registration.size);
+    printf("\nType notebook price");
+    fflush(stdin);
+    scanf("%f", &notebook_registration.price);
+
+    notebook_sell = notebook_registration;
+
+    printf("\nSold notebook: ");
+    printf("\nManufacturer: %s", notebook_sell.manufacturer);
+    printf("\nSheets number: %d", notebook_sell.sheets_number);
+    printf("\nCover type: %s", notebook_sell.cover_type);
+    printf("\nNotebook size: %s", notebook_sell.size);
+    printf("\nNotebook price: %f", notebook_sell.price);
 }
